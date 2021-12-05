@@ -1,0 +1,29 @@
+{% extends 'nav-bar.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    <a href="{% url 'index' %}">Video Request App</a>
+</h1>
+<a href="{% url 'vrform' %}"><button >Enter your video request </button></a>
+
+
+{% for i in object_list %}
+<div>
+        <h2>
+            {{ i.video_title }}
+        </h2>
+    <p>
+        {{ i.video_desc }}
+    </p>
+</div>
+    {% endfor %}
+
+</body>
+</html>
+{% endblock %}

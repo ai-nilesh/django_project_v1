@@ -1,0 +1,17 @@
+{% extends 'nav-bar.html' %}
+
+{%  block content %}
+{% for i in object_list %}
+    <div>
+    <h2>
+        <a href="{% url 'blogurl' i.pk %}"> {{i.title  }} </a>
+    </h2>
+
+    <p>
+        {{ i.content }}
+    </p>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

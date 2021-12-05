@@ -1,0 +1,26 @@
+{% extends 'nav-bar.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'vrform'  %}" method="POST">
+    {% csrf_token %}
+     <label for="usertitle">User Title: </label>
+
+        {{ form.inp_title }}
+
+    <br>
+
+     <label for="user_desc">User Title: </label>
+        {{ form.inp_desc }}
+
+    <a href=""> <button type="submit">Submit</button></a>
+
+</form>
+</body>
+</html>
+{% endblock %}
